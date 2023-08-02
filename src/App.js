@@ -16,9 +16,9 @@ function App() {
     },
 ])
 // add tasks
-const addTasks = (task) => {
+const addTask = (task) => {
   const id = Math.floor(Math.random()*1000) + 1
-  const newTask = {id,...task}
+  const newTask = {id, ...task}
   setTasks([...tasks, newTask])
 }
 //DELETE TASKSSS!!!
@@ -38,9 +38,9 @@ const toggleReminder= (id)=>{
       {/* <h2>helluu {name}</h2>
       <Header title='momoo'/> }  */} 
       <Header onAdd={()=> setShowAddTask(!showAddTask)}/>  
-      {showAddTask && <AddTask onAdd={addTasks} />}
-      {tasks.length > 0 ? <Tasks tasks={tasks} onDelete={deleteTask} 
-      onToggle={toggleReminder}/> : 'No Tasks to showw'}
+      {showAddTask && <AddTask onAdd={addTask} />}
+      {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} 
+      onToggle={toggleReminder}/> ): ('No Tasks to showw')}
     </div>
   )
 }

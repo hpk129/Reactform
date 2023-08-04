@@ -37,7 +37,7 @@ const toggleReminder= (id)=>{
      {/* {<h1>hello from react</h1> */}
       {/* <h2>helluu {name}</h2>
       <Header title='momoo'/> }  */} 
-      <Header onAdd={()=> setShowAddTask(!showAddTask)}/>  
+      <Header onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>  
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} 
       onToggle={toggleReminder}/> ): ('No Tasks to showw')}

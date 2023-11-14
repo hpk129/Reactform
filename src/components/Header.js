@@ -7,7 +7,7 @@ const Header = ({title, onAdd, showAdd}) => {
     <header className='header'>
         {/* <h1 style={{color: 'red', backgroundColor:
          'black'}}>{title}</h1>  */}
-        <h1> Task manager</h1>
+        <h1>Task manager</h1>
         <Button color= {showAdd ? 'red':'green'} text={showAdd ? 'Close':'Add'} onClick={onAdd}/>
       
     </header>

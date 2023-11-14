@@ -11,6 +11,8 @@ body {
 }
 
 .container {
+  /* background-color: rgb(248, 210, 246);   rgb(248, 210, 246) */
+  background-color: rgb(148, 199, 238);
   max-width: 500px;
   margin: 30px auto;
   overflow: auto;

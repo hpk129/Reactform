@@ -31,12 +31,8 @@ const toggleReminder= (id)=>{
   setTasks(tasks.map((task) => task.id===id ? {...task,reminder: !task.reminder} : task))
 }
   // you can write javascript directly in here
-  const name = "momo";
   return (
-    <div className="container">
-     {/* {<h1>hello from react</h1> */}
-      {/* <h2>helluu {name}</h2>
-      <Header title='momoo'/> }  */} 
+    <div className="container"> 
       <Header onAdd={()=> setShowAddTask(!showAddTask)} showAdd={showAddTask}/>  
       {showAddTask && <AddTask onAdd={addTask} />}
       {tasks.length > 0 ? (<Tasks tasks={tasks} onDelete={deleteTask} 
